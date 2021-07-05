@@ -1,3 +1,7 @@
+# Denae Luna
+# CSD-310
+# Module 8.2
+
 import mysql.connector
 from mysql.connector import errorcode
 
