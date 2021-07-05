@@ -56,4 +56,7 @@ for player in players:
     print("First Name: {}".format(player[1]))
     print("Last Name: {}".format(player[2]))
     print("Team ID: {}\n".format(player[3]))
+
+input("\n\n Press any key to continue...")
+
 db.close()
