@@ -26,12 +26,25 @@ except mysql.connector.Error as err:
     else:
         print(err)
 
-# Performs table queries
+# holds query strings
 sql_join_query = "\
-    SELECT player_id, first_name, last_name, team_name\
-        FROM player\
-         INNER JOIN team\
-             ON player.team_id = team.team_id"
+    SELECT\
+        player_id,\
+        first_name,\
+        last_name, team_name\
+    FROM player\
+      INNER JOIN team\
+        ON player.team_id = team.team_id"
+
+sql_insert_query = "\
+    INSERT INTO\
+        player(player_id\
+        first_name\
+        last_name\
+        team_id\
+    VALUES (%s, %s, %s, 1)"
+
+new_player = ['Harry', ]
 
 cursor = db.cursor()
 
